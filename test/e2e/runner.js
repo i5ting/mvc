@@ -1,10 +1,9 @@
-var path = require('path')
-var http = require('http')
-var spawn = require('cross-spawn')
+const path = require('path')
+const http = require('http')
+const spawn = require('cross-spawn')
+const app = require('../../app')
 
-var app = require('../../app')
-
-var server = http.createServer(app.callback());
+const server = http.createServer(app.callback())
 
 app.listen(8080)
 
@@ -26,17 +25,17 @@ var runner = spawn('./node_modules/.bin/nightwatch', args, {
 })
 
 runner.on('exit', function (code) {
-  server.close(function(){
-    console.log("server close");
-  });
+  server.close(function () {
+    console.log("server close")
+  })
 
-  process.exit(code);
+  process.exit(code)
 })
 
 runner.on('error', function (err) {
-  server.close(function(){
-    console.log("server close");
-  });
+  server.close(function () {
+    console.log("server close")
+  })
 
-  throw err;
+  throw err
 })

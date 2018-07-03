@@ -1,8 +1,7 @@
 // http://nightwatchjs.org/guide#settings-file
-
-const fs = require('fs');
-const path = require('path');
-const srcFolders = ['test/e2e/specs'];
+const fs = require('fs')
+const path = require('path')
+const srcFolders = ['test/e2e/specs']
 
 module.exports = {
     'src_folders': srcFolders,

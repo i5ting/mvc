@@ -1,13 +1,13 @@
 module.exports = {
-    'start': function(client) {
+    'start': function (client) {
         client.url('http://localhost:8080/')
     },
 
-    '<h1> visible': function(client) {
+    '<h1> visible': function (client) {
         client.expect.element('h1').to.be.visible;
     },
 
-    'end': function(client) {
-        client.end();
+    'end': function (client) {
+        client.end()
     }
 }

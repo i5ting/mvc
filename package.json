@@ -10,7 +10,6 @@
     "test:e2e": "export NODE_ENV=test && node test/e2e/runner.js"
   },
   "dependencies": {
-    "chromedriver": "^2.40.0",
     "debug": "^2.6.3",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
@@ -22,16 +21,17 @@
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
     "mount-koa-routes": "^2.0.1",
-    "nightwatch-helpers": "^1.2.0",
-    "pug": "^2.0.0-rc.1",
-    "selenium-server": "^3.13.0"
+    "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "cucumber": "^4.2.1",
+    "chromedriver": "^2.40.0",
     "nightwatch": "^0.9.21",
+    "nightwatch-helpers": "^1.2.0",
     "nodemon": "^1.8.1",
     "sinon": "^6.1.0",
-    "superkoa": "^1.0.3"
+    "superkoa": "^1.0.3",
+    "selenium-server": "^3.13.0"
   }
 }

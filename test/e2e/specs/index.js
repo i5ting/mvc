@@ -10,4 +10,4 @@ module.exports = {
     'end': function(client) {
         client.end();
     }
-};
+}

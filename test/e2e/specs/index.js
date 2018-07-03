@@ -3,7 +3,7 @@ module.exports = {
         client.url('http://localhost:8080/')
     },
 
-    'test KPlayer': function(client) {
+    '<h1> visible': function(client) {
         client.expect.element('h1').to.be.visible;
     },
 

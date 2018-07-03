@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node bin/www",
-    "dev": "./node_modules/.bin/nodemon bin/www",
+    "start": "NODE_ENV=product node bin/www",
+    "dev": "NODE_ENV=development ./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test ava"
   },
   "dependencies": {
     "debug": "^2.6.3",
@@ -23,6 +23,11 @@
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
-    "nodemon": "^1.8.1"
+    "ava": "^0.25.0",
+    "cucumber": "^4.2.1",
+    "nightwatch": "^0.9.21",
+    "nodemon": "^1.8.1",
+    "sinon": "^6.1.0",
+    "superkoa": "^1.0.3"
   }
 }

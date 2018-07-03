@@ -32,7 +32,7 @@ app.use(async (ctx, next) => {
 })
 
 // routes
-mount(app,  __dirname + '/routes', true);
+mount(app,  __dirname + '/routes', process.env.NODE_ENV === 'development');
 
 // error-handling
 app.on('error', (err, ctx) => {

@@ -1,5 +1,10 @@
 const router = require('koa-router')()
-const User = require('../models/user')
+
+
+var $ = require('mount-controllers')(__dirname).orders_controller;
+
+router.get('/new', $.new); 
+
 
 router.get('/', async (ctx, next) => {
   ctx.body = 'this is a users response!'

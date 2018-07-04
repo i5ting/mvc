@@ -23,7 +23,10 @@
     "koa-views": "^5.2.1",
     "mongoose": "^5.2.1",
     "mongoosedao": "^1.0.13",
+    "mount-controllers": "^1.0.8",
     "mount-koa-routes": "^2.0.1",
+    "mount-middlewares": "^1.0.7",
+    "mount-models": "^1.0.8",
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {

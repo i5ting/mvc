@@ -18,23 +18,24 @@ var port = config.port
 var connectionString = 'mongodb://' + host + ':' + port + '/' + db + ''
 
 var options = {
-    db: {
-        native_parser: true
-    },
-    server: {
-        auto_reconnect: true,
-        poolSize: 5
-    }
+    // useMongoClient: true,
+    useNewUrlParser: true,
+    autoIndex: false, // Don't build indexes
+    reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
+    reconnectInterval: 500, // Reconnect every 500ms
+    poolSize: 10, // Maintain up to 10 socket connections
+    // If not connected, return errors immediately rather than waiting for reconnect
+    bufferMaxEntries: 0
 }
 
 console.log(connectionString)
 
 mongoose.connect(connectionString, options, function (err, res) {
     if (err) {
-        console.log('[mongoose log] Error connecting to: ', +connectionString + '. ' + err)
+        console.log('[mongoose log] Error connecting to: ' + connectionString + '. ' + err)
         return process.exit(1)
     } else {
-        return console.log('[mongoose log] Successfully connected to: ', +connectionString)
+        return console.log('[mongoose log] Successfully connected to: ' + connectionString)
     }
 })
 

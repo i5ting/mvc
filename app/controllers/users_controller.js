@@ -1,6 +1,5 @@
-const $models = require('mount-models')(__dirname);
-
-const User = $models.user;
+const $models = require('mount-models')(__dirname)
+const User = $models.user
 
 exports.index = async (ctx, next) => {
     ctx.body = 'this is a users response!'
@@ -44,4 +43,4 @@ exports.register = async (ctx, next) => {
             }
         }
     }
-};
+}

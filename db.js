@@ -16,9 +16,7 @@ if (is_debug) {
 var db = config.db
 var port = config.port
 var connectionString = 'mongodb://' + host + ':' + port + '/' + db + ''
-
 var options = {
-    // useMongoClient: true,
     useNewUrlParser: true,
     autoIndex: false, // Don't build indexes
     reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
@@ -27,8 +25,6 @@ var options = {
     // If not connected, return errors immediately rather than waiting for reconnect
     bufferMaxEntries: 0
 }
-
-console.log(connectionString)
 
 mongoose.connect(connectionString, options, function (err, res) {
     if (err) {

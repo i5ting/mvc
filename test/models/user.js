@@ -20,5 +20,5 @@ test('User.save()', async t => {
 
 test.afterEach(async t => {
     // This runs after each test
-    await User.deleteOne({username: 'i5ting'})
+    // await User.deleteOne({username: 'i5ting'})
 });

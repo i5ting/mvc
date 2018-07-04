@@ -33,5 +33,11 @@
     "sinon": "^6.1.0",
     "superkoa": "^1.0.3",
     "selenium-server": "^3.13.0"
+  },
+  "ava": {
+		"files": [
+      "test/**/*.js",
+			"!test/e2e/**/*.js"
+    ]
   }
 }

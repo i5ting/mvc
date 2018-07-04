@@ -5,7 +5,6 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
-const koaBody = require('koa-body')
 const mount = require('mount-koa-routes')
 
 // connect db

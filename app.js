@@ -22,7 +22,7 @@ app.use(json())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
 
-app.use(views(__dirname + '/views', {
+app.use(views(__dirname + '/app/views', {
   extension: 'pug'
 }))
 
@@ -35,7 +35,7 @@ app.use(async (ctx, next) => {
 })
 
 // routes
-mount(app,  __dirname + '/routes', process.env.NODE_ENV === 'development');
+mount(app,  __dirname + '/app/routes', process.env.NODE_ENV === 'development');
 
 // error-handling
 app.on('error', (err, ctx) => {

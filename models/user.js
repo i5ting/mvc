@@ -1,14 +1,18 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const MongooseDao = require('mongoosedao')
+const Promise = require('bluebird')
 
 const userSchema = new Schema(
     {
-        "name": "String",
+        "username": "String",
         "password": "String"
     }
 )
 
 const User = mongoose.model('User', userSchema)
+
+Promise.promisifyAll(User)
+Promise.promisifyAll(User.prototype)
 
 module.exports = User

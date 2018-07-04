@@ -10,6 +10,7 @@
     "test:e2e": "export NODE_ENV=test && node test/e2e/runner.js"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "debug": "^2.6.3",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
@@ -37,9 +38,9 @@
     "selenium-server": "^3.13.0"
   },
   "ava": {
-		"files": [
+    "files": [
       "test/**/*.js",
-			"!test/e2e/**/*.js"
+      "!test/e2e/**/*.js"
     ]
   }
 }

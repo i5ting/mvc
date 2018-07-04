@@ -17,3 +17,8 @@ test('User.save()', async t => {
 
     t.is(u.username, 'i5ting')
 })
+
+test.afterEach(async t => {
+    // This runs after each test
+    await User.deleteOne({username: 'i5ting'})
+});

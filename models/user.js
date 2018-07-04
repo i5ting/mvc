@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const MongooseDao = require('mongoosedao')
 const Promise = require('bluebird')
 
 const userSchema = new Schema(

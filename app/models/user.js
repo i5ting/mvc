@@ -24,5 +24,4 @@ Promise.promisifyAll(User.prototype)
 
 Promise.promisifyAll(UserDao)
 
-
 module.exports = UserDao;

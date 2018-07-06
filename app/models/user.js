@@ -8,6 +8,9 @@ var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 var MongooseDao = require('mongoosedao');
 
+var Promise = require('bluebird');
+
+
 var userSchema = new Schema(
     {"username":"String","password":"String"}
 );
@@ -15,4 +18,11 @@ var userSchema = new Schema(
 var User = mongoose.model('User', userSchema);
 var UserDao = new MongooseDao(User);
  
+
+Promise.promisifyAll(User)
+Promise.promisifyAll(User.prototype)
+
+Promise.promisifyAll(UserDao)
+
+
 module.exports = UserDao;

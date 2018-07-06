@@ -6,6 +6,7 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const mount = require('mount-koa-routes')
+const res_api = require('koa.res.api')
 
 // connect db
 require('./db')
@@ -33,6 +34,8 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
+// for api
+app.use(res_api())
 // routes
 mount(app,  __dirname + '/app/routes', process.env.NODE_ENV === 'development');
 

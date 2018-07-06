@@ -137,7 +137,7 @@ exports.api = {
       let api_user_id = ctx.api_user.id;
 
       let users = await User.queryAsync({});
-    
+      console.log(users)
       await ctx.api({
         users : users
       })

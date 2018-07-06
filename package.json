@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=product node bin/www",
+    "start": "NODE_ENV=product node --inspect bin/www",
     "dev": "NODE_ENV=development ./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
     "test": "NODE_ENV=test ava",
@@ -12,6 +12,7 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "debug": "^2.6.3",
+    "jsonwebtoken": "^8.3.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^3.2.0",
     "koa-convert": "^1.2.0",
@@ -21,6 +22,7 @@
     "koa-router": "^7.1.1",
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
+    "koa.res.api": "^2.0.0",
     "mongoose": "^5.2.1",
     "mongoosedao": "^1.0.13",
     "mount-controllers": "^1.0.8",

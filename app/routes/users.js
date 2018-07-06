@@ -1,8 +1,43 @@
-const router = require('koa-router')()
+"use strict";
+
+const router = require('koa-router')();
+
+const $middlewares  = require('mount-middlewares')(__dirname);
+// core controller
 const $ = require('mount-controllers')(__dirname).users_controller;
 
-router.get('/', $.index)
+/**
+ * Auto generate RESTful url routes.
+ *
+ * URL routes:
+ *
+ *  GET    /users[/]        => user.list()
+ *  GET    /users/new       => user.new()
+ *  GET    /users/:id       => user.show()
+ *  GET    /users/:id/edit  => user.edit()
+ *  POST   /users[/]        => user.create()
+ *  PATCH  /users/:id       => user.update()
+ *  DELETE /users/:id       => user.destroy()
+ *
+ */
 
-router.post('/register', $.register)
+router.get('/new', $.new); 
+ 
+router.get('/:id/edit', $.edit);
 
-module.exports = router
+router.get('/', $.list);
+
+router.post('/', $.create);
+
+router.get('/:id', $.show);
+
+router.patch('/:id', $.update);
+
+router.delete('/:id', $.destroy);
+
+// -- custom routes
+
+
+
+
+module.exports = router;

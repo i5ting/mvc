@@ -1,27 +1,23 @@
-"use strict";
+"use strict"
 
 /**
- * Created by alfred on July 6th 2018, 11:01:52 am.
+ * Created by auther on July 6th 2018, 3:23:30 pm.
  */
 
-var mongoose    = require('mongoose');
-var Schema      = mongoose.Schema;
-var MongooseDao = require('mongoosedao');
+const mongoose    = require('mongoose')
+const Schema      = mongoose.Schema
+const MongooseDao = require('mongoosedao')
+const Promise = require('bluebird')
 
-var Promise = require('bluebird');
-
-
-var userSchema = new Schema(
+const userSchema = new Schema(
     {"username":"String","password":"String"}
-);
+)
 
-var User = mongoose.model('User', userSchema);
-var UserDao = new MongooseDao(User);
- 
+const User = mongoose.model('User', userSchema)
+const UserDao = new MongooseDao(User)
 
 Promise.promisifyAll(User)
 Promise.promisifyAll(User.prototype)
-
 Promise.promisifyAll(UserDao)
 
-module.exports = UserDao;
+module.exports = UserDao

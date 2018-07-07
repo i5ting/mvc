@@ -15,11 +15,11 @@ block content
           each n in ['user.username','user.password']
             td #{ eval(n) }
           td 
-            a(href='/users/#{ user._id}') Show
+            a(href=`/users/${user._id}`) Show
           td 
-            a(href='/users/#{ user._id}/edit') Edit
+            a(href=`/users/${user._id}/edit`) Edit
           td 
-            a(onclick="click_del('/users/#{ user._id}/')") Delete
+            a(onclick=`click_del('/users/#{user._id}/')`) Delete
 
   br
 

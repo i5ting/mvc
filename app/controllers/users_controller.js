@@ -11,7 +11,7 @@ exports.list = async (ctx, next) => {
   console.log(ctx.method + ' /users => list, query: ' + JSON.stringify(ctx.query));
   try {
     let users = await User.getAllAsync();
-  
+    
     await ctx.render('users/index', {
       users : users
     })
@@ -34,25 +34,26 @@ exports.show = async (ctx, next) => {
   console.log(ctx.method + ' /users/:id => show, query: ' + JSON.stringify(ctx.query) +
     ', params: ' + JSON.stringify(ctx.params));
     
-  try {
+  // try {
     let id = ctx.params.id;
     let user = await User.getByIdAsync(id);
-  
-    console.log(user);
+    // user.keys = User.model._keys;
+    // console.log(user.model.__keys);
   
     await ctx.render('users/show', {
       user : user
     });
-  } catch (err) {
-    return ctx.api_error(err);
-  }
+  // } catch (err) {
+  //   console.dir(err)
+  //   return ctx.api_error(err);
+  // }
 };
 
 exports.edit = async (ctx, next) => {
   console.log(ctx.method + ' /users/:id/edit => edit, query: ' + JSON.stringify(ctx.query) +
     ', params: ' + JSON.stringify(ctx.params));
 
-  try {
+  // try {
     let id = ctx.params.id;
 
     let user = await User.getByIdAsync(id);
@@ -63,9 +64,9 @@ exports.edit = async (ctx, next) => {
     await ctx.render('users/edit', {
       user : user
     });
-  } catch (err) {
-    return ctx.api_error(err);
-  }
+  // } catch (err) {
+  //   return ctx.api_error(err);
+  // }
 };
 
 exports.create = async (ctx, next) => {

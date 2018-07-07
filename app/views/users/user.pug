@@ -2,13 +2,16 @@
 - var _method = user._action == 'edit' ? ""  : "post"
 - var _type   = user._action == 'edit' ? "button"  : "submit"
 - var onClick  = user._action == 'edit' ?  "click_edit('user-" + user._action + "-form','/users/" + user._id + "/')" : ""
-form(id='user-#{ user._action}-form',action="#{_action}", method="#{_method}",role='form')
+form(id=`user-${ user._action}-form`,action=`${_action}`, method=`${_method}`,role='form')
+  
   each n in ['user.username','user.password']
     - m = eval(n);
+    - value = m == undefined ? '' : m
+    p #{value}
     div(class="field")
       label #{n.split('.')[1]} #{m}
       br
-      input(type='text',name="#{n.split('.')[1]}" ,value="#{ m == undefined ? '' : m }")
+      input(type='text',name=`${n.split('.')[1]}` ,value=`${ value }`)
         
   div(class="actions") 
-    input(type='#{_type}',value='Submit',onClick='#{onClick}')
+    input(type=`${_type}`,value='Submit',onClick=`${onClick}`)

@@ -3,11 +3,11 @@ extends ../layouts/layout
 block content
   p#notice
   - user
-  each n in ['user.username', 'user.password']
+  each n in ['user.username','user.password']
     p
       strong #{n.split('.')[1]}:
       span #{eval(n)}
 
-  a(href=`/users/${user._id}/edit`) Edit
+  a(href=`/users/${ user._id}/edit`) Edit
   span |
   a(href='/users') Back

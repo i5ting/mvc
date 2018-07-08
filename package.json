@@ -29,7 +29,7 @@
     "mount-koa-routes": "^2.0.1",
     "mount-middlewares": "^1.0.7",
     "mount-models": "^1.0.8",
-    "pug": "^2.0.0-rc.1"
+    "pug": "^2.0.3"
   },
   "devDependencies": {
     "ava": "^0.25.0",

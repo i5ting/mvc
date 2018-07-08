@@ -6,4 +6,5 @@
 - [单元测试](https://github.com/i5ting/mvc/tree/test)，origin/test
 - [集成测试](https://github.com/i5ting/mvc/tree/nightwatch)，origin/nightwatch
 - [集成mongoose](https://github.com/i5ting/mvc/tree/mongoose)，origin/mongoose
-- [庖丁解view](https://github.com/i5ting/mvc/tree/mvc)，origin/mvc
+- [添加mvc目录](https://github.com/i5ting/mvc/tree/mvc)，origin/mvc
+- [庖丁解view](https://github.com/i5ting/mvc/tree/view)，origin/view

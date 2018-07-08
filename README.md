@@ -8,3 +8,4 @@
 - [集成mongoose](https://github.com/i5ting/mvc/tree/mongoose)，origin/mongoose
 - [添加mvc目录](https://github.com/i5ting/mvc/tree/mvc)，origin/mvc
 - [庖丁解view](https://github.com/i5ting/mvc/tree/view)，origin/view
+- [《零基础十分钟教你用Node.js写脚手架》](https://github.com/i5ting/write-scaffold-with-nodejs)

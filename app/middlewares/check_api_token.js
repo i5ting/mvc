@@ -4,7 +4,7 @@
  * MIT Licensed
  */
 
-const jwt = require('jsonwebtoken')//用来创建和确认用户信息摘要
+const jwt = require('jsonwebtoken')
 
 function log(t) {
   console.log(t)

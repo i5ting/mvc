@@ -2,7 +2,6 @@ extends ../layouts/layout
 
 block content
   h1 Listing users
-
   table
     thead
       tr
@@ -20,8 +19,6 @@ block content
             a(href=`/users/${ user._id}/edit`) Edit
           td 
             a(onclick=`click_del('/users/${ user._id}/')`) Delete
-
   br
-
   p 
     a(href='/users/new') New User
